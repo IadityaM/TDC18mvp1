@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@color/colorPrimaryDark"
+    android:padding="16dp"
+    tools:context="fgc.tdc18mvp1.fragments.EntryPassFrag">
+
+
+    <ImageView
+        android:id="@+id/dash_epass_iv_dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:onClick="ePassOnClick"
+        android:src="@drawable/gbm"
+        android:tint="@color/colorBackground_BG100" />
+
+    <TextView
+        android:id="@+id/dash_epass_tv_uname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dash_epass_iv_dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:onClick="ePassOnClick"
+        android:text="Aditya Mishra"
+        android:textAllCaps="true"
+        android:textColor="@color/col1_WhiteSmoke"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/dash_epass_tv_designation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dash_epass_tv_uname"
+        android:layout_centerHorizontal="true"
+        android:onClick="ePassOnClick"
+        android:text="Participant"
+        android:textAllCaps="false"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/dash_epass_iv_settings"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:onClick="ePassOnClick"
+        android:src="@drawable/ic_settings_black_24dp"
+        android:tint="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/dash_epass_btn_snackb"
+        style="@style/Base.Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="ePassOnClick"
+        android:text="Make SB" />
+
+</RelativeLayout>

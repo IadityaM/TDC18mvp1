@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="fgc.tdc18mvp1.SplashActivity">
+
+    <!--<ImageView
+        android:id="@+id/splash_iv_cover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="352dp"
+        android:elevation="10dp"
+        app:srcCompat="@drawable/tdc18_v1x" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/splash_iv_cover"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:text="Welcome"
+            android:textColor="#FFF"
+            android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/splash_iv_cover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="fitEnd"
+        app:srcCompat="@drawable/logo_tdc18v1_small" />
+
+        <ImageView
+            android:id="@+id/splash_iv_cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/tdc18_v1x" />-->
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/splash_iv_topgrad"
+        android:layout_width="match_parent"
+        android:layout_height="164dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@color/colorPrimaryDark" />
+
+    <ImageView
+        android:id="@+id/splash_iv_clouds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/splash_tv_tagline"
+        android:layout_alignParentStart="true"
+        android:gravity="fill"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/tdc18_splash" />
+
+
+    <!--<ImageView
+        android:id="@+id/splash_iv_plane"
+        android:layout_width="200dp"
+        android:layout_height="160dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        app:srcCompat="@drawable/icon_tdc_plane" />-->
+
+    <ImageView
+        android:id="@+id/splash_iv_plane"
+        android:layout_width="240dp"
+        android:layout_height="160dp"
+        android:layout_alignBottom="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="120dp"
+        app:srcCompat="@drawable/icon_tdc_plane" />
+
+    <TextView
+        android:id="@+id/splash_tv_tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#40333826"
+        android:padding="16dp"
+        android:text="&quot;Part the clouds of doubt and give wings to your dreams at TDC'18&quot;"
+        android:textAlignment="center"
+        android:textColor="@color/col1_WhiteSmoke"
+        android:textSize="24sp"
+        android:textStyle="italic" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:paddingLeft="16dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-20dp"
+            android:elevation="16dp"
+            android:fontFamily="@font/fira_sans"
+            android:text="The"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBackground_W"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-20dp"
+            android:elevation="16dp"
+            android:fontFamily="@font/fira_sans"
+            android:text="Disruption"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="58sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="16dp"
+            android:fontFamily="@font/fira_sans"
+            android:text="Challenge '18"
+            android:textAllCaps="true"
+            android:textColor="@color/colorBackground_W"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>

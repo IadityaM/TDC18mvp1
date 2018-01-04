@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="fgc.tdc18mvp1.UserProfileActivity"
+    tools:showIn="@layout/activity_user_profile">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/profile_iv_dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/pika" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/profile_tv_uname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/profile_iv_dp"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/profile_iv_dp"
+        android:text="Aditya Mishra" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/profile_tv_parttype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/profile_tv_uname"
+        android:layout_below="@+id/profile_tv_uname"
+        android:text="Participant"
+        android:textColor="@color/colorAccentLight"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:textAllCaps="true" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/profile_tv_applstatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/profile_iv_dp"
+        android:layout_alignStart="@+id/profile_tv_uname"
+        android:text="Application: Submitted 4/6" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/profile_tv_training"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/profile_tv_applstatus"
+        android:layout_alignStart="@+id/profile_tv_uname"
+        android:text="Trainings Completed: 2/50" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/profile_tv_seat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/profile_tv_training"
+        android:layout_alignStart="@+id/profile_tv_uname"
+        android:text="Seat No: TBD" />
+
+    <LinearLayout
+        android:id="@+id/profile_linlay_badges"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/profile_iv_dp"
+        android:layout_below="@+id/profile_iv_dp"
+        android:layout_marginTop="4dp"
+        android:gravity="top|center"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <ImageView
+            android:id="@+id/profile_badges_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/common_google_signin_btn_icon_disabled" />
+
+        <ImageView
+            android:id="@+id/profile_badges_2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/common_google_signin_btn_icon_disabled" />
+
+        <ImageView
+            android:id="@+id/profile_badges_3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/common_google_signin_btn_icon_disabled" />
+
+        <ImageView
+            android:id="@+id/profile_badges_4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/common_google_signin_btn_icon_disabled" />
+
+        <ImageView
+            android:id="@+id/profile_badges_5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/common_google_signin_btn_icon_light" />
+
+        <ImageView
+            android:id="@+id/profile_badges_6"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/common_google_signin_btn_icon_light" />
+
+        <ImageView
+            android:id="@+id/profile_badges_7"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/common_google_signin_btn_icon_disabled" />
+
+        <ImageView
+            android:id="@+id/profile_badges_8"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/common_google_signin_btn_icon_disabled" />
+
+        <ImageView
+            android:id="@+id/profile_badges_9"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/common_google_signin_btn_icon_disabled" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/profile_iv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/profile_tv_seat"
+        android:layout_alignEnd="@+id/profile_linlay_badges"
+        android:src="@drawable/ic_location_on_black_24dp"
+        android:tint="@color/colorIcon_BG400" />
+
+    <ImageView
+        android:id="@+id/profile_iv_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/profile_tv_uname"
+        android:layout_toStartOf="@+id/profile_iv_settings"
+        android:src="@drawable/ic_refresh_black_24dp"
+        android:tint="@color/colorIcon_BG200" />
+
+    <ImageView
+        android:id="@+id/profile_iv_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/profile_tv_uname"
+        android:src="@drawable/ic_settings_black_24dp"
+        android:tint="@color/colorIcon_BG300" />
+
+    <ImageView
+        android:id="@+id/profile_iv_alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/profile_iv_location"
+        android:layout_below="@+id/profile_iv_location"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_add_alarm_black_24dp"
+        android:tint="@color/colorIcon_BG400" />
+
+
+</RelativeLayout>

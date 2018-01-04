@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#546E7A</color>
+    <color name="colorPrimaryDark">#263238</color>
+    <color name="colorAccent">#00c853</color>
+    <color name="colorAccentLight">#64dd17</color>
+    <color name="colorAccent2">#ffc400</color>
+    <color name="colorAccent2Dark">#ffab00</color>
+    <color name="colorAccent3">#FFEA00</color>
+
+    <!--Text Colors-->
+    <color name="colorTextHeading">#212121</color>
+    <color name="colorTextSubheading">#424242</color>
+    <color name="colorTextMultiline">#616161</color>
+
+    <!--Background Colors-->
+    <color name="colorBackground_W">#ffffff</color>
+    <color name="colorBackground_G50">#FAFAFA</color>
+    <color name="colorBackground_BG50">#eceff1</color>
+    <color name="colorBackground_G100">#f5f5f5</color>
+    <color name="colorBackground_BG100">#cfd8dc</color>
+
+    <!--Icon Colors-->
+    <color name="colorIcon_G500">#9e9e9e</color>
+    <color name="colorIcon_G400">#bdbdbd</color>
+    <color name="colorIcon_G300">#e0e0e0</color>
+
+    <color name="colorIcon_BG500">#607D8B</color>
+    <color name="colorIcon_BG400">#78909C</color>
+    <color name="colorIcon_BG300">#90A4AE</color>
+    <color name="colorIcon_BG200">#B0BEC5</color>
+
+
+    <!--Text Colors-->
+    <color name="col1_WhiteSmoke">#f4f4f4</color>
+    <color name="col2_Prim">#E2E0E1</color>
+    <color name="col3_Thistle">#D4D3D4</color>
+    <color name="col4_MulledWine">#525154</color>
+    <color name="col5_Prim2">#E1DFE0</color>
+    <color name="col6_">#a5a4a6</color>
+</resources>

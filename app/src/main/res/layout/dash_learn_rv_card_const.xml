@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:fitsSystemWindows="true">
+
+    <ImageView
+        android:id="@+id/learn_card_iv_poster"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="55dp"
+        android:elevation="12dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:srcCompat="@drawable/pika" />
+
+    <RelativeLayout
+        android:id="@+id/learn_card_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/colorBackground_W"
+        android:elevation="6dp"
+        android:padding="8dp"
+        android:paddingStart="68dp"
+        app:layout_constraintStart_toStartOf="@+id/learn_card_iv_poster"
+        app:layout_constraintTop_toTopOf="@+id/learn_card_iv_poster">
+
+        <TextView
+            android:id="@+id/learn_card_content_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="Introduction to Lean Startups"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/learn_card_content_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="17dp"
+            android:layout_toEndOf="@+id/learn_card_content_action"
+            android:text="4 Hours"
+            android:textColor="@color/colorTextMultiline" />
+
+        <TextView
+            android:id="@+id/learn_card_content_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imageView4"
+            android:layout_below="@+id/imageView4"
+            android:text="Attend"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/learn_card_content_endorse"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/learn_card_content_action"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="24dp"
+            android:elevation="4dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/disrupting_heart" />
+
+        <TextView
+            android:id="@+id/learn_card_content_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/learn_card_content_endorse"
+            android:layout_alignStart="@+id/learn_card_content_title"
+            android:layout_below="@+id/learn_card_content_title"
+            android:fontFamily="@font/fira_sans_condensed"
+            android:text="Going in with the new, learning the ropes around lean startup methodologies."
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@+id/learn_card_content_duration"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@color/colorBackground_G100" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

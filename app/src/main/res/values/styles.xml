@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="DashSwitchTheme" parent="Widget.AppCompat.CompoundButton.Switch">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/colorAccent</item>
+
+        <item name="colorControlNormal">@color/colorAccent2Dark</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/colorAccent2Dark</item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">@color/colorAccent2Dark</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>
