@@ -20,7 +20,7 @@ public class OnBoardActivity extends AppCompatActivity {
     /**
      * The number of pages (wizard steps) to show in this demo.
      */
-    private static final int NUM_PAGES = 3;
+    private static final int NUM_PAGES = 5;
     Button btn_onBoard_Skip, btn_onBoard_Next;
     Intent toHome;
     /**

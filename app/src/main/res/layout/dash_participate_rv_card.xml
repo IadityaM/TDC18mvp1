@@ -2,59 +2,66 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="120dp"
-    android:background="@color/colorBackground_W">
+    android:layout_height="120dp">
 
 
-    <TextView
-        android:id="@+id/part_card_tv_stepno"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:fontFamily="@font/fira_sans_black"
-        android:text="1"
-        android:textAlignment="center"
-        android:textSize="80sp"
-        android:textStyle="bold" />
+    <RelativeLayout
+        android:id="@+id/part_card_lay_data"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:background="@color/colorBackground_W"
+        android:elevation="4dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="12dp">
+
+        <TextView
+            android:id="@+id/part_card_tv_stepname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="User Info"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/part_card_tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/part_card_tv_stepname"
+            android:layout_alignStart="@+id/part_card_tv_stepname"
+            android:layout_below="@+id/part_card_tv_stepname"
+            android:text="Help us know you" />
+
+        <ImageView
+            android:id="@+id/part_card_iv_status"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_above="@+id/part_card_tv_desc"
+            android:layout_toEndOf="@+id/part_card_tv_stepname"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_navigate_next_black_24dp" />
+
+
+        <ImageView
+            android:id="@+id/part_card_iv_vector"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/part_card_iv_status"
+            app:srcCompat="@drawable/icon_tdc_plane" />
+
+
+    </RelativeLayout>
 
     <ImageView
-        android:id="@+id/part_card_iv_divider"
+        android:id="@+id/part_card_iv_status_strip"
         android:layout_width="40dp"
         android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/part_card_tv_stepno"
-        android:paddingEnd="10dp"
-        android:paddingStart="10dp"
-        app:srcCompat="@color/colorAccent2" />
+        android:layout_marginStart="40dp"
+        app:srcCompat="@color/colorAccent3" />
 
-    <TextView
-        android:id="@+id/part_card_tv_stepname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="24dp"
-        android:layout_toEndOf="@+id/part_card_iv_divider"
-        android:text="User Profile"
-        android:textSize="36sp" />
-
-    <ImageView
-        android:id="@+id/part_card_iv_launch"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignBottom="@+id/part_card_tv_stepname"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:layout_marginEnd="16dp"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/ic_navigate_next_black_24dp" />
-
-    <android.support.design.widget.CheckableImageButton
-        android:id="@+id/part_card_iv_status"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_alignEnd="@+id/part_card_iv_divider"
-        android:layout_alignTop="@+id/part_card_iv_launch"
-        android:layout_centerVertical="true"
-        app:srcCompat="@drawable/ic_done_all_black_24dp" />
 </RelativeLayout>

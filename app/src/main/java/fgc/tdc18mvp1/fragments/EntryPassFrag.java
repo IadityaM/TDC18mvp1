@@ -53,8 +53,8 @@ public class EntryPassFrag extends Fragment {
                 startActivity(new Intent(getActivity(), UserProfileActivity.class));
             case R.id.dash_epass_tv_designation:
                 Snackbar.make(myView, "You're currently a " + null, Snackbar.LENGTH_SHORT).show();
-            case R.id.dash_epass_btn_snackb:
-                Snackbar.make(myView, "Onclick tester", Snackbar.LENGTH_SHORT).show();
+/*            case R.id.dash_epass_btn_snackb:
+                Snackbar.make(myView, "Onclick tester", Snackbar.LENGTH_SHORT).show();*/
             default:
                 Snackbar.make(myView, "Button has no linked functions or actions", Snackbar.LENGTH_SHORT).show();
         }

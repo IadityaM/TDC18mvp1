@@ -51,6 +51,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fgc.tdc18mvp1.DashboardActivity" />
         </activity>
+        <activity
+            android:name=".LogonActivity"
+            android:label="@string/title_activity_logon"
+            android:parentActivityName=".DashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="fgc.tdc18mvp1.DashboardActivity" />
+        </activity>
     </application>
 
 </manifest>

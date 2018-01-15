@@ -24,20 +24,21 @@ import java.util.Timer;
 import fgc.tdc18mvp1.fragments.EntryPassFrag;
 import fgc.tdc18mvp1.fragments.HiglightsFrag;
 import fgc.tdc18mvp1.fragments.LearnFragment;
-import fgc.tdc18mvp1.fragments.ParticipareFragment;
+import fgc.tdc18mvp1.fragments.ParticipateFragment;
 import fgc.tdc18mvp1.fragments.TDC18OverviewFragment;
 
 public class DashboardActivity extends AppCompatActivity {
 
     private static final int NUM_PAGES_SWITCHY = 2, NUM_PAGES_HIGHLIGHTS = 5, HIGHLIGHTS_TIMER_NEXT = 4000, HIGHLIGHTS_TIMER_START = 4500;
     Timer dash_vp_highlights_timer;
+
     ViewPager dash_vp_highlights, dash_vp_switchy;
+    PagerAdapter dash_vp_switchy_adapter, dash_vp_highlights_adapter;
+
     SwitchCompat dash_switch_vpcontrol;
 
     Toolbar dash_tool_bar;
     ActionBar dash_action_bar;
-
-    PagerAdapter dash_vp_switchy_adapter, dash_vp_highlights_adapter;
 
     TextView dash_tv_learn, dash_tv_participate;
     //Fragments
@@ -52,9 +53,9 @@ public class DashboardActivity extends AppCompatActivity {
 
         dash_tool_bar = findViewById(R.id.dash_toolbar);
         dash_tool_bar.setTitle(R.string.dash_title);
+
         setSupportActionBar(dash_tool_bar);
         dash_action_bar = getSupportActionBar();
-
 
         dash_switch_vpcontrol = findViewById(R.id.dash_switch_toggle);
         dash_vp_highlights = findViewById(R.id.dash_vp_highlights);
@@ -218,7 +219,7 @@ public class DashboardActivity extends AppCompatActivity {
                     return new LearnFragment();
 
                 case 1:
-                    return new ParticipareFragment();
+                    return new ParticipateFragment();
 
                 default:
                     return new LearnFragment();
