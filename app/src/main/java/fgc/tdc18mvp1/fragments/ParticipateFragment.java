@@ -38,7 +38,7 @@ public class ParticipateFragment extends Fragment {
         /*ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_participate, container, false);*/
         View rootView = inflater.inflate(R.layout.fragment_participate, container, false);
 
-        dash_participate_rv = rootView.findViewById(R.id.dash_learn_rv);
+        dash_participate_rv = rootView.findViewById(R.id.dash_part_rv);
 
         // use a linear layout manager
         mLayoutManager = new LinearLayoutManager(getActivity());

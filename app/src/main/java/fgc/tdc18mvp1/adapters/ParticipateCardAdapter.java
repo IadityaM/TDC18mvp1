@@ -49,7 +49,7 @@ public class ParticipateCardAdapter extends RecyclerView.Adapter<ParticipateCard
     //Step 4: Create a LayoutInflater object, pass the layouts you want ot inflate and store it in a View Object (Example: View myview)
     @Override   //Called everytime a new row is to be created.
     public ParticipateCardAdapter.ParticipateRVViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View learn_myview = learning_rv_inflater.inflate(R.layout.dash_learn_rv_card, parent, false);
+        View learn_myview = learning_rv_inflater.inflate(R.layout.dash_participate_rv_card, parent, false);
         //View object "myview" here returns the root layout from the recycler_news_item
 
         //Step 5: Create a ViewHolder Object and pass the View Object created above into it.

@@ -16,6 +16,7 @@ import fgc.tdc18mvp1.adapters.LearnCardAdapter;
 import fgc.tdc18mvp1.dataModels.LearningData;
 
 public class LearnFragment extends Fragment {
+
     private RecyclerView dash_learn_rv;
     private LearnCardAdapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
