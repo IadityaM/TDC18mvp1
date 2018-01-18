@@ -71,7 +71,7 @@ public class ParticipateCardAdapter extends RecyclerView.Adapter<ParticipateCard
 
         holder.participate_rv_vh_title.setText(curernt_data.part_string_step_name);
         holder.participate_rv_vh_description.setText(curernt_data.part_string_step_desc);
-        holder.participate_rv_vh_status_strip.setBackgroundColor(curernt_data.part_status_color);
+        holder.participate_rv_vh_status_strip.setImageResource(curernt_data.part_status_color);
         holder.participate_rv_vh_status_icon.setImageResource(curernt_data.part_pic_status_icon);
         holder.participate_rv_vh_status_vector.setImageResource(curernt_data.part_pic_step_vector);
 

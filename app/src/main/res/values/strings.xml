@@ -11,6 +11,11 @@
     <string name="title_activity_tdc17">TDC17Activity</string>
     <string name="title_activity_user_profile">User Home</string>
     <string name="title_activity_settings">My Settings</string>
+    <string name="title_activity_logon">Log On</string>
+
+    <!--String related to Navigation Drawer-->
+    <string name="nav_drawer_open">Open navigation drawer</string>
+    <string name="nav_drawer_close">Close navigation drawer</string>
 
     <!-- Strings related to Settings -->
 
@@ -19,8 +24,7 @@
 
     <string name="pref_title_social_recommendations">Enable social recommendations</string>
     <string name="pref_description_social_recommendations">Recommendations for people to contact
-        based on your message history
-    </string>
+        based on your message history</string>
 
     <string name="pref_title_display_name">Display name</string>
     <string name="pref_default_display_name">John Smith</string>
@@ -83,5 +87,5 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
-    <string name="title_activity_logon">Log On</string>
+
 </resources>

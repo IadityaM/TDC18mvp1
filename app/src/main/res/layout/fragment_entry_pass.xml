@@ -44,7 +44,7 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
-    <ImageView
+    <!--<ImageView
         android:id="@+id/dash_epass_iv_settings"
         android:layout_width="20dp"
         android:layout_height="20dp"
@@ -52,8 +52,17 @@
         android:layout_alignParentTop="true"
         android:onClick="ePassOnClick"
         android:src="@drawable/ic_settings_black_24dp"
-        android:tint="@color/colorPrimary" />
+        android:tint="@color/colorPrimary" />-->
 
+    <ImageView
+        android:id="@+id/dash_epass_iv_refresh"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:onClick="ePassOnClick"
+        android:src="@drawable/ic_refresh_black_24dp"
+        android:tint="@color/colorIcon_BG300" />
     <!--<Button
         android:id="@+id/dash_epass_btn_snackb"
         style="@style/Base.Widget.AppCompat.Button.Colored"

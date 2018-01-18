@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SwitchCompat;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CompoundButton;
@@ -35,7 +36,7 @@ public class DashboardActivity extends AppCompatActivity {
     ViewPager dash_vp_highlights, dash_vp_switchy;
     PagerAdapter dash_vp_switchy_adapter, dash_vp_highlights_adapter;
 
-    SwitchCompat dash_switch_vpcontrol;
+    SwitchCompat dash_switch_pager_control;
 
     Toolbar dash_tool_bar;
     ActionBar dash_action_bar;
@@ -43,8 +44,8 @@ public class DashboardActivity extends AppCompatActivity {
     TextView dash_tv_learn, dash_tv_participate;
     //Fragments
     EntryPassFrag epf1;
-    private int enable_color = R.color.colorAccent;
-    private int disable_color = R.color.colorAccent2Dark;
+    private int color_participate = R.color.colorAccent;
+    private int color_learn = R.color.colorAccent2Dark;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,14 +58,19 @@ public class DashboardActivity extends AppCompatActivity {
         setSupportActionBar(dash_tool_bar);
         dash_action_bar = getSupportActionBar();
 
-        dash_switch_vpcontrol = findViewById(R.id.dash_switch_toggle);
+        // enable ActionBar app icon to behave as action to toggle nav drawer
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+
+
+        dash_switch_pager_control = findViewById(R.id.dash_switch_toggle);
         dash_vp_highlights = findViewById(R.id.dash_vp_highlights);
         dash_vp_switchy = findViewById(R.id.dash_vp_switchy);
 
         dash_tv_learn = findViewById(R.id.dash_tv_switch_learn);
         dash_tv_participate = findViewById(R.id.dash_tv_switch_participate);
 
-        dash_switch_vpcontrol.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        dash_switch_pager_control.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                 Log.v("Switch State=", "" + isChecked);
@@ -92,10 +98,10 @@ public class DashboardActivity extends AppCompatActivity {
             public void onPageSelected(int position) {
 
                 if (position == 1) {
-                    dash_switch_vpcontrol.setChecked(true);
+                    dash_switch_pager_control.setChecked(true);
                     //switchyVPParticipateMode();
                 } else {
-                    dash_switch_vpcontrol.setChecked(false);
+                    dash_switch_pager_control.setChecked(false);
                     //switchyVPLearnMode();
                 }
                 /*switch (position) {
@@ -141,9 +147,9 @@ public class DashboardActivity extends AppCompatActivity {
     public void dashClick(View view) {
         switch (view.getId()) {
             case R.id.dash_tv_switch_learn:
-                dash_switch_vpcontrol.setChecked(false);
+                dash_switch_pager_control.setChecked(false);
             case R.id.dash_tv_switch_participate:
-                dash_switch_vpcontrol.setChecked(true);
+                dash_switch_pager_control.setChecked(true);
             /*case R.id.home_fab_add_claims:
                 startActivity(toServiceRequest);
                 break;
@@ -165,7 +171,14 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.actionbar_menu, menu);
+        return true;
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         switch (item.getItemId()) {
             case R.id.action_refresh:
                 // User chose the "Settings" item, show the app settings UI...
@@ -191,7 +204,7 @@ public class DashboardActivity extends AppCompatActivity {
 
     public void switchyVPLearnMode() {
         dash_tv_learn.setTextColor(getResources().getColor(R.color.colorAccent2));
-        dash_tv_participate.setTextColor(getResources().getColor(R.color.colorTextMultiline));
+        dash_tv_participate.setTextColor(getResources().getColor(R.color.colorIcon_BG300));
         dash_vp_switchy.setCurrentItem(0);
     }
 

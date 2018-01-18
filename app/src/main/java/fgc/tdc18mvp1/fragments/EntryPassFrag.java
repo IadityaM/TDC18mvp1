@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import fgc.tdc18mvp1.R;
-import fgc.tdc18mvp1.SettingsActivity;
 import fgc.tdc18mvp1.UserProfileActivity;
 
 public class EntryPassFrag extends Fragment {
@@ -45,14 +44,16 @@ public class EntryPassFrag extends Fragment {
 
     public void ePassOnClick(View myView) {
         switch (myView.getId()) {
-            case R.id.dash_epass_iv_settings:
-                startActivity(new Intent(getActivity(), SettingsActivity.class));
+           /* case R.id.dash_epass_iv_settings:
+                startActivity(new Intent(getActivity(), SettingsActivity.class));*/
             case R.id.dash_epass_iv_dp:
                 startActivity(new Intent(getActivity(), UserProfileActivity.class));
             case R.id.dash_epass_tv_uname:
                 startActivity(new Intent(getActivity(), UserProfileActivity.class));
             case R.id.dash_epass_tv_designation:
                 Snackbar.make(myView, "You're currently a " + null, Snackbar.LENGTH_SHORT).show();
+            case R.id.dash_epass_iv_refresh:
+                Snackbar.make(myView, "Refreshing Data. Please wait...", Snackbar.LENGTH_SHORT).show();
 /*            case R.id.dash_epass_btn_snackb:
                 Snackbar.make(myView, "Onclick tester", Snackbar.LENGTH_SHORT).show();*/
             default:
