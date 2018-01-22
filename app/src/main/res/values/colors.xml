@@ -4,9 +4,10 @@
     <color name="colorPrimaryDark">#263238</color>
     <color name="colorAccent">#00c853</color>
     <color name="colorAccentLight">#64dd17</color>
-    <color name="colorAccent2">#ffc400</color>
-    <color name="colorAccent2Dark">#ffab00</color>
+    <color name="colorAccent2Light">#ffc400</color>
+    <color name="colorAccent2">#ffab00</color>
     <color name="colorAccent3">#FFEA00</color>
+    <color name="colorAccent4">#eb6064</color>
 
     <!--Text Colors-->
     <color name="colorTextHeading">#212121</color>

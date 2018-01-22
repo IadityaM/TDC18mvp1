@@ -6,6 +6,6 @@
         <bitmap
             android:antialias="true"
             android:gravity="center"
-            android:src="@drawable/tdc18_v1x" />
+            android:src="@drawable/ic_logo_tdc18_v1" />
     </item>
 </layer-list>

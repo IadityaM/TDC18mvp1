@@ -22,6 +22,7 @@
             android:layout_marginStart="24dp"
             android:maxWidth="200dp"
             android:text="User Info"
+            android:textColor="@color/colorTextHeading"
             android:textSize="24sp" />
 
         <TextView
@@ -31,12 +32,13 @@
             android:layout_alignStart="@+id/part_card_tv_stepname"
             android:layout_below="@+id/part_card_tv_stepname"
             android:layout_toStartOf="@+id/part_card_iv_vector"
-            android:text="Help us know you" />
+            android:text="Help us know you"
+            android:textColor="@color/colorTextSubheading" />
 
         <ImageView
             android:id="@+id/part_card_iv_status"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_above="@+id/part_card_tv_desc"
             android:layout_marginStart="16dp"
             android:layout_toEndOf="@+id/part_card_tv_stepname"
@@ -46,14 +48,14 @@
 
         <ImageView
             android:id="@+id/part_card_iv_vector"
-            android:layout_width="120dp"
+            android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="20dp"
-            android:tint="@color/colorIcon_BG200"
-            app:srcCompat="@drawable/icon_tdc_plane" />
-
+            android:layout_marginStart="12dp"
+            android:elevation="4dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_logo_tdc18_v1" />
 
     </RelativeLayout>
 

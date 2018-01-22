@@ -91,7 +91,7 @@
         android:text="&quot;Part the clouds of doubt and give wings to your dreams at TDC'18&quot;"
         android:textAlignment="center"
         android:textColor="@color/col1_WhiteSmoke"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:textStyle="italic" />
 
     <LinearLayout
@@ -110,7 +110,7 @@
             android:layout_marginBottom="-20dp"
             android:elevation="16dp"
             android:fontFamily="@font/fira_sans"
-            android:text="The"
+            android:text="@string/the"
             android:textAllCaps="true"
             android:textColor="@color/colorBackground_W"
             android:textSize="48sp"
@@ -123,10 +123,10 @@
             android:layout_marginBottom="-20dp"
             android:elevation="16dp"
             android:fontFamily="@font/fira_sans"
-            android:text="Disruption"
+            android:text="@string/disruption"
             android:textAllCaps="true"
             android:textColor="@color/colorAccent"
-            android:textSize="58sp"
+            android:textSize="56sp"
             android:textStyle="bold" />
 
         <TextView
@@ -135,10 +135,10 @@
             android:layout_height="wrap_content"
             android:elevation="16dp"
             android:fontFamily="@font/fira_sans"
-            android:text="Challenge '18"
+            android:text="@string/challenge_18"
             android:textAllCaps="true"
             android:textColor="@color/colorBackground_W"
-            android:textSize="48sp"
+            android:textSize="44sp"
             android:textStyle="bold" />
     </LinearLayout>
 </RelativeLayout>

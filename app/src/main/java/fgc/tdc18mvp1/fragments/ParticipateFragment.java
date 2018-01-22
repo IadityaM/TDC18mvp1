@@ -67,7 +67,7 @@ public class ParticipateFragment extends Fragment {
         participateDataset = new ArrayList<>();
 
         for (int i = 0; i < 30; i++) {
-            participateDataset.add(i, new ParticipateData(R.drawable.ic_tdc_plane,
+            participateDataset.add(i, new ParticipateData(R.drawable.ic_contact_phone_24dp,
                     R.drawable.ic_done_all_black_24dp,
                     R.color.colorAccent,
                     1,
@@ -75,15 +75,15 @@ public class ParticipateFragment extends Fragment {
                     "Contact Info",
                     "Help us reach you"));
 
-            participateDataset.add(i + 1, new ParticipateData(R.drawable.ic_tdc_plane,
+            participateDataset.add(i + 1, new ParticipateData(R.drawable.ic_contact_phone_24dp,
                     R.drawable.ic_cloud_done_black_24dp,
-                    R.color.colorAccent2Dark,
+                    R.color.colorAccent2,
                     1,
                     1,
                     "Social Connect",
                     "Social is IN"));
 
-            participateDataset.add(i + 2, new ParticipateData(R.drawable.ic_tdc_plane,
+            participateDataset.add(i + 2, new ParticipateData(R.drawable.ic_contact_phone_24dp,
                     R.drawable.ic_done_black_24dp,
                     R.color.colorAccent2,
                     1,

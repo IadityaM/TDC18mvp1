@@ -1,5 +1,6 @@
 package fgc.tdc18mvp1;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
@@ -9,7 +10,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SwitchCompat;
 import android.support.v7.widget.Toolbar;
@@ -45,7 +48,12 @@ public class DashboardActivity extends AppCompatActivity {
     //Fragments
     EntryPassFrag epf1;
     private int color_participate = R.color.colorAccent;
-    private int color_learn = R.color.colorAccent2Dark;
+    private int color_learn = R.color.colorAccent2;
+
+    private DrawerLayout mDrawerLayout;
+    private ActionBarDrawerToggle mDrawerToggle;
+    private CharSequence mDrawerTitle;
+    private CharSequence mTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,10 +65,6 @@ public class DashboardActivity extends AppCompatActivity {
 
         setSupportActionBar(dash_tool_bar);
         dash_action_bar = getSupportActionBar();
-
-        // enable ActionBar app icon to behave as action to toggle nav drawer
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
 
 
         dash_switch_pager_control = findViewById(R.id.dash_switch_toggle);
@@ -97,11 +101,11 @@ public class DashboardActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
 
-                if (position == 1) {
-                    dash_switch_pager_control.setChecked(true);
+                if (position == 0) {
+                    dash_switch_pager_control.setChecked(false);
                     //switchyVPParticipateMode();
                 } else {
-                    dash_switch_pager_control.setChecked(false);
+                    dash_switch_pager_control.setChecked(true);
                     //switchyVPLearnMode();
                 }
                 /*switch (position) {
@@ -141,7 +145,56 @@ public class DashboardActivity extends AppCompatActivity {
 
 
         epf1 = new EntryPassFrag();
+
+        mTitle = mDrawerTitle = getTitle();
+        mDrawerLayout = findViewById(R.id.dash_lay_drawer);
+        mDrawerToggle = new ActionBarDrawerToggle(
+                this,
+                mDrawerLayout,
+                R.string.nav_drawer_open,
+                R.string.nav_drawer_close) {
+
+            /**
+             * Called when a drawer has settled in a completely closed state.
+             */
+            public void onDrawerClosed(View view) {
+                super.onDrawerClosed(view);
+                getSupportActionBar().setTitle(mTitle);
+                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+            }
+
+            /**
+             * Called when a drawer has settled in a completely open state.
+             */
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+                getSupportActionBar().setTitle(mDrawerTitle);
+                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+            }
+        };
+
+        // Set the drawer toggle as the DrawerListener
+        mDrawerLayout.addDrawerListener(mDrawerToggle);
+
+        // enable ActionBar app icon to behave as action to toggle nav drawer
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+
     }
+
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        // Sync the toggle state after onRestoreInstanceState has occurred.
+        mDrawerToggle.syncState();
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        mDrawerToggle.onConfigurationChanged(newConfig);
+    }
+
 
     //All button and view clicks are handled together in this function
     public void dashClick(View view) {
@@ -178,7 +231,12 @@ public class DashboardActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
+        // Pass the event to ActionBarDrawerToggle, if it returns
+        // true, then it has handled the app icon touch event
+        if (mDrawerToggle.onOptionsItemSelected(item)) {
+            return true;
+        }
+        // Handle your other action bar items...
         switch (item.getItemId()) {
             case R.id.action_refresh:
                 // User chose the "Settings" item, show the app settings UI...

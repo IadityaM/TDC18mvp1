@@ -16,7 +16,8 @@
             android:id="@+id/dash_learn_tv_heading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="One can never be too prepared for an elevator pitch! Explore the following resources to gain the edge." />
+            android:text="One can never be too prepared for an elevator pitch! Explore the following resources to gain the edge."
+            android:textColor="@color/colorTextSubheading" />
 
         <TextView
             android:id="@+id/textView4"
@@ -37,7 +38,7 @@
             android:layout_marginStart="40dp"
             android:layout_marginTop="4dp"
             android:text="*10 New"
-            android:textColor="@color/colorAccent2Dark" />
+            android:textColor="@color/colorAccent2" />
 
     </RelativeLayout>
 
