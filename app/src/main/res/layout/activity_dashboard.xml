@@ -59,14 +59,14 @@
 
         <android.support.v7.widget.SwitchCompat
             android:id="@+id/dash_switch_toggle"
-            style="@style/DashSwitchTheme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/dash_vp_highlights"
+            android:layout_below="@+id/dash_vp_highlights"
             android:layout_centerHorizontal="true"
             android:elevation="8dp"
             android:paddingBottom="8dp"
-            android:paddingTop="8dp" />
+            android:paddingTop="8dp"
+            android:theme="@style/DashboardSwitchTheme" />
 
         <TextView
             android:id="@+id/dash_tv_switch_participate"

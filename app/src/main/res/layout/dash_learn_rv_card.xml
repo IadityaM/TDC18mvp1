@@ -27,7 +27,7 @@
         android:layout_marginTop="20dp"
         android:layout_toEndOf="@+id/learn_card_iv_poster"
         android:background="@color/colorBackground_W"
-        android:elevation="6dp"
+        android:elevation="4dp"
         android:padding="8dp"
         android:paddingStart="68dp">
 
@@ -38,6 +38,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:text="Introduction to Lean Startups"
+            android:textColor="@color/colorTextHeading"
             android:textStyle="bold" />
 
         <TextView
@@ -90,7 +91,7 @@
             android:layout_height="30dp"
             android:layout_alignBottom="@+id/learn_card_content_action"
             android:layout_alignParentEnd="true"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="12dp"
             android:background="@color/colorBackground_W"
             android:scaleType="fitXY"
             app:srcCompat="@drawable/ic_bookmark_border_black_24dp" />

@@ -107,7 +107,7 @@
         android:textColor="@color/colorAccentLight" />
 
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/nav_drawer_iv_feedback"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
@@ -116,11 +116,16 @@
         app:srcCompat="@drawable/ic_feedback_24dp" />
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/nav_rv_activities"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/imageView12"
+        android:layout_above="@+id/nav_drawer_iv_feedback"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/nav_prog_part"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:choiceMode="singleChoice"
+        android:divider="@null"
+        android:scrollbars="vertical"
+        app:layoutManager="LinearLayoutManager" />
 
 </RelativeLayout>

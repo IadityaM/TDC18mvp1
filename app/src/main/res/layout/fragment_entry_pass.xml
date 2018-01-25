@@ -63,6 +63,15 @@
         android:onClick="ePassOnClick"
         android:src="@drawable/ic_refresh_black_24dp"
         android:tint="@color/colorIcon_BG300" />
+
+    <ImageView
+        android:id="@+id/dash_epass_iv_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="ePassOnClick"
+        android:src="@drawable/ic_location_on_black_24dp" />
     <!--<Button
         android:id="@+id/dash_epass_btn_snackb"
         style="@style/Base.Widget.AppCompat.Button.Colored"

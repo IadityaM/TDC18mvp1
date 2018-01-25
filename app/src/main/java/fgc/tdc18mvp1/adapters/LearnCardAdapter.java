@@ -50,12 +50,12 @@ public class LearnCardAdapter extends RecyclerView.Adapter<LearnCardAdapter.Lear
 
     //Step 9: Create a contructor using alt+insert and add the context parameters to it.
     //Set the inflater using the context reference
-    public LearnCardAdapter(Context context, List<LearningData> my_newsRVdata) {
+    public LearnCardAdapter(Context context, List<LearningData> myRVdata) {
         learning_rv_inflater = LayoutInflater.from(context);
         //Step 16.b: assign the context of current activity to the context variable created above.
         this.context = context;
 
-        this.learning_rv_data = my_newsRVdata;
+        this.learning_rv_data = myRVdata;
     }
 
     public void delete(int position) {
@@ -70,11 +70,11 @@ public class LearnCardAdapter extends RecyclerView.Adapter<LearnCardAdapter.Lear
         //View object "myview" here returns the root layout from the recycler_news_item
 
         //Step 5: Create a ViewHolder Object and pass the View Object created above into it.
-        LearningRVViewHolder mynewsholder = new LearningRVViewHolder(learn_myview);
+        LearningRVViewHolder myLearningHolder = new LearningRVViewHolder(learn_myview);
 
         Log.d("TDC'18", "Inside onCreateViewHolder in LearningRV");
         //Step 7: return the ViewHolder Object here
-        return mynewsholder;
+        return myLearningHolder;
     }
 
     @Override

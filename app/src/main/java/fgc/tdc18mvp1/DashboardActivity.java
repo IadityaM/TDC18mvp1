@@ -1,5 +1,6 @@
 package fgc.tdc18mvp1;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,6 +15,8 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SwitchCompat;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -21,10 +24,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Timer;
 
+import fgc.tdc18mvp1.adapters.NavDrawAdapter;
+import fgc.tdc18mvp1.dataModels.NavDrawData;
 import fgc.tdc18mvp1.fragments.EntryPassFrag;
 import fgc.tdc18mvp1.fragments.HiglightsFrag;
 import fgc.tdc18mvp1.fragments.LearnFragment;
@@ -47,6 +55,17 @@ public class DashboardActivity extends AppCompatActivity {
     TextView dash_tv_learn, dash_tv_participate;
     //Fragments
     EntryPassFrag epf1;
+
+    //Nav Drawer
+    private List<NavDrawData> drawerNavList;
+    private RecyclerView dash_RV_drawer;
+    private NavDrawAdapter mDrawerRVAdapter;
+    private RecyclerView.LayoutManager mDrawerRVLayoutManager;
+
+    private ImageView drawer_iv_feedback;
+
+    //-------------#End of Nav Drawer#--------------------
+
     private int color_participate = R.color.colorAccent;
     private int color_learn = R.color.colorAccent2;
 
@@ -170,6 +189,25 @@ public class DashboardActivity extends AppCompatActivity {
                 super.onDrawerOpened(drawerView);
                 getSupportActionBar().setTitle(mDrawerTitle);
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+
+                getDrawerData();
+                dash_RV_drawer = findViewById(R.id.nav_rv_activities);
+
+                // use a linear layout manager
+                mDrawerRVLayoutManager = new LinearLayoutManager(getApplicationContext());
+                dash_RV_drawer.setLayoutManager(mDrawerRVLayoutManager);
+
+                // use this setting to improve performance if you know that changes
+                // in content do not change the layout size of the RecyclerView
+                dash_RV_drawer.setHasFixedSize(true);
+
+                //learnDataset = new ArrayList<>();
+
+                // specify an adapter (see also next example)
+                mDrawerRVAdapter = new NavDrawAdapter(getApplicationContext(), drawerNavList);
+                dash_RV_drawer.setAdapter(mDrawerRVAdapter);
+
+                drawer_iv_feedback = findViewById(R.id.nav_drawer_iv_feedback);
             }
         };
 
@@ -201,8 +239,16 @@ public class DashboardActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.dash_tv_switch_learn:
                 dash_switch_pager_control.setChecked(false);
+                break;
             case R.id.dash_tv_switch_participate:
                 dash_switch_pager_control.setChecked(true);
+                break;
+
+            case R.id.nav_drawer_iv_feedback:
+                //TODO: Add a feedback Activity
+                Snackbar.make(view, "Feed us your grievences or appreciation", Snackbar.LENGTH_SHORT).show();
+                break;
+
             /*case R.id.home_fab_add_claims:
                 startActivity(toServiceRequest);
                 break;
@@ -262,13 +308,13 @@ public class DashboardActivity extends AppCompatActivity {
 
     public void switchyVPLearnMode() {
         dash_tv_learn.setTextColor(getResources().getColor(R.color.colorAccent2));
-        dash_tv_participate.setTextColor(getResources().getColor(R.color.colorIcon_BG300));
+        dash_tv_participate.setTextColor(getResources().getColor(R.color.colorBackground_W));
         dash_vp_switchy.setCurrentItem(0);
     }
 
     public void switchyVPParticipateMode() {
         dash_tv_participate.setTextColor(getResources().getColor(R.color.colorAccent));
-        dash_tv_learn.setTextColor(getResources().getColor(R.color.colorTextMultiline));
+        dash_tv_learn.setTextColor(getResources().getColor(R.color.colorBackground_W));
         dash_vp_switchy.setCurrentItem(1);
     }
 
@@ -276,6 +322,23 @@ public class DashboardActivity extends AppCompatActivity {
         epf1.ePassOnClick(view);
     }
 
+    public void getDrawerData() {
+        drawerNavList = new ArrayList<>();
+
+        drawerNavList.add(
+                new NavDrawData(
+                        R.drawable.pika,
+                        "My Profile",
+                        new Intent(this, UserProfileActivity.class)
+                ));
+
+        drawerNavList.add(
+                new NavDrawData(
+                        R.drawable.icon_tdc_plane,
+                        "TDC Legacy",
+                        new Intent(this, TDC17Activity.class)
+                ));
+    }
 
     //ViewPager Handler Classes
     private class SwitcherPagerAdapter extends FragmentPagerAdapter {
@@ -385,5 +448,4 @@ public class DashboardActivity extends AppCompatActivity {
         public void onPageScrolled(final int position, final float positionOffset, final int positionOffsetPixels) {
         }
     }
-
 }

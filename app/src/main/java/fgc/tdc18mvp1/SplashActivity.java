@@ -22,7 +22,7 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //Fresco.initialize(this);
-        setContentView(R.layout.activity_splash3);
+        setContentView(R.layout.activity_splash);
 
         splash1 = findViewById(R.id.splash_iv_clouds);
         splash2 = findViewById(R.id.splash_iv_plane);
