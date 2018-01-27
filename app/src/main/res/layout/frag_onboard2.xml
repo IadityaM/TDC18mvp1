@@ -28,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="16"
-        android:src="@drawable/ob2img" />
+        android:src="@drawable/ob_learn" />
 
     <TextView
         android:id="@+id/obn_tv_desc"

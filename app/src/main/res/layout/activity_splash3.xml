@@ -61,7 +61,7 @@
         android:layout_below="@id/splash_iv_topgrad"
         android:gravity="fill"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/tdc18_splash" />
+        app:srcCompat="@drawable/splash_back_cloudbreak" />
 
 
     <ImageView
