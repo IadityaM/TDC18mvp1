@@ -58,7 +58,6 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/splash_tv_tagline"
         android:layout_alignParentStart="true"
-        android:gravity="fill"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/splash_back_cloudbreak" />
 
