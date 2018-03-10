@@ -1,16 +1,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="@dimen/dash_top_card_height"
+    android:padding="8dp"
     tools:context="fgc.tdc18mvp1.fragments.TDC18OverviewFragment">
 
     <TextView
         android:id="@+id/overview_tv_participants"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="118dp"
+        android:layout_marginBottom="8dp"
         android:text="Participants"
         android:textAlignment="center" />
 
@@ -18,10 +19,9 @@
         android:id="@+id/overview_tv_participants_num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/overview_tv_participants"
+        android:layout_above="@+id/overview_tv_reach"
         android:layout_alignEnd="@+id/overview_tv_participants"
         android:layout_alignStart="@+id/overview_tv_participants"
-        android:layout_marginBottom="40dp"
         android:text="28+"
         android:textAlignment="center"
         android:textSize="30sp" />
@@ -67,6 +67,15 @@
         android:text="47+"
         android:textAlignment="center"
         android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/overview_tv_participants_num"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_logo_tdc18_v1wide" />
 
 
 </RelativeLayout>

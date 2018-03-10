@@ -2,13 +2,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/dash_rellay_highlights"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="@dimen/dash_top_card_height"
     android:background="@drawable/sirifort_complex"
     tools:context="fgc.tdc18mvp1.fragments.HiglightsFrag">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="#5a263238"
         android:paddingBottom="8dp"
@@ -20,6 +20,7 @@
             android:id="@+id/dash_highlights_tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/dash_highlights_tv_subtitle"
             android:layout_alignParentStart="true"
             android:text="@string/highlights_title"
             android:textAllCaps="true"
@@ -31,8 +32,8 @@
             android:id="@+id/dash_highlights_tv_subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/dash_highlights_tv_title"
-            android:layout_below="@+id/dash_highlights_tv_title"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
             android:autoSizeTextType="uniform"
             android:fontFamily="@font/fira_sans"
             android:text="A beloved jewel of proud Delhi and currently housing the extravaganza of TDC '18."
@@ -43,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
             android:text="Read More..."
             android:textColor="@color/colorBackground_BG100" />
     </RelativeLayout>

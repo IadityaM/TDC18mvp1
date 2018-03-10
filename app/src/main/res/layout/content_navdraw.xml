@@ -115,6 +115,15 @@
         android:tint="@color/colorBackground_G100"
         app:srcCompat="@drawable/ic_feedback_24dp" />
 
+    <ImageView
+        android:id="@+id/dash_epass_iv_location"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/nav_rv_activities"
+        android:layout_toStartOf="@+id/nav_tv_learning_status"
+        android:onClick="ePassOnClick"
+        android:src="@drawable/ic_location_on_black_24dp" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/nav_rv_activities"
         android:layout_width="match_parent"
@@ -127,5 +136,16 @@
         android:divider="@null"
         android:scrollbars="vertical"
         app:layoutManager="LinearLayoutManager" />
+
+    <Button
+        android:id="@+id/nav_btn_signon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/nav_rv_activities"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="4dp"
+        android:text="Sign On" />
 
 </RelativeLayout>

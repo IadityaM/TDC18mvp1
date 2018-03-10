@@ -85,6 +85,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="fgc.tdc18mvp1.DashboardActivity" />
         </activity>
+        <activity android:name=".Notifications" />
+        <activity android:name=".WorkshopsActivity"></activity>
     </application>
 
 </manifest>

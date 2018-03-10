@@ -12,6 +12,17 @@
 
     </style>
 
+    <style name="AppThemeLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">@color/colorAccent</item>
+
+    </style>
+
 
     <style name="DashboardSwitchTheme" parent="Theme.AppCompat.NoActionBar">
 

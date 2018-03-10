@@ -23,6 +23,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -62,7 +63,8 @@ public class DashboardActivity extends AppCompatActivity {
     private NavDrawAdapter mDrawerRVAdapter;
     private RecyclerView.LayoutManager mDrawerRVLayoutManager;
 
-    private ImageView drawer_iv_feedback;
+    private Button drawer_btn_logon;
+    private ImageView drawer_iv_feedback, dash_entry_iv_loc;
 
     //-------------#End of Nav Drawer#--------------------
 
@@ -189,6 +191,24 @@ public class DashboardActivity extends AppCompatActivity {
                 super.onDrawerOpened(drawerView);
                 getSupportActionBar().setTitle(mDrawerTitle);
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+
+                drawer_btn_logon = findViewById(R.id.nav_btn_signon);
+                dash_entry_iv_loc = findViewById(R.id.dash_epass_iv_location);
+
+                /*Click Listeners*/
+                drawer_btn_logon.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(new Intent(DashboardActivity.this, LogonActivity.class));
+                    }
+                });
+
+                dash_entry_iv_loc.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(new Intent(DashboardActivity.this, MapsActivity.class));
+                    }
+                });
 
                 getDrawerData();
                 dash_RV_drawer = findViewById(R.id.nav_rv_activities);

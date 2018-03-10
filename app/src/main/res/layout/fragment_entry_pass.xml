@@ -1,19 +1,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="@dimen/dash_top_card_height"
     android:background="@color/colorPrimaryDark"
     android:padding="16dp"
     tools:context="fgc.tdc18mvp1.fragments.EntryPassFrag">
 
-
     <ImageView
         android:id="@+id/dash_epass_iv_dp"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
         android:onClick="ePassOnClick"
         android:src="@drawable/gbm"
         android:tint="@color/colorBackground_BG100" />
@@ -24,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/dash_epass_iv_dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="8dp"
         android:onClick="ePassOnClick"
         android:text="Aditya Mishra"
         android:textAllCaps="true"
@@ -41,7 +39,7 @@
         android:text="Participant"
         android:textAllCaps="false"
         android:textColor="@color/colorAccent"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:textStyle="bold" />
 
     <!--<ImageView
@@ -54,24 +52,28 @@
         android:src="@drawable/ic_settings_black_24dp"
         android:tint="@color/colorPrimary" />-->
 
-    <ImageView
-        android:id="@+id/dash_epass_iv_refresh"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:onClick="ePassOnClick"
-        android:src="@drawable/ic_refresh_black_24dp"
-        android:tint="@color/colorIcon_BG300" />
+    <!--    <ImageView
+            android:id="@+id/dash_epass_iv_refresh"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:onClick="ePassOnClick"
+            android:src="@drawable/ic_refresh_black_24dp"
+            android:tint="@color/colorIcon_BG300" />-->
 
     <ImageView
-        android:id="@+id/dash_epass_iv_location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/dash_epass_iv_next"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:foregroundGravity="right"
         android:onClick="ePassOnClick"
-        android:src="@drawable/ic_location_on_black_24dp" />
+        android:src="@drawable/ic_navigate_next_black_24dp"
+        android:tint="@color/colorIcon_BG300" />
+
+
     <!--<Button
         android:id="@+id/dash_epass_btn_snackb"
         style="@style/Base.Widget.AppCompat.Button.Colored"

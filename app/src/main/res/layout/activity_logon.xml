@@ -2,33 +2,75 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/logon_main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="fgc.tdc18mvp1.LogonActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/logon_google"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:onClick="logonBtnClick"
         app:srcCompat="@drawable/ic_google_plus_logo" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/logon_linkedin"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_centerVertical="true"
         android:layout_marginStart="70dp"
-        android:layout_toEndOf="@+id/imageView2"
-        app:srcCompat="@drawable/ic_linkedin_black" />
+        android:layout_toEndOf="@+id/logon_google"
+        android:onClick="logonBtnClick"
+        app:srcCompat="@drawable/ic_linkedin_logo" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/logon_facebook"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="65dp"
-        android:layout_toStartOf="@+id/imageView2"
+        android:layout_marginEnd="70dp"
+        android:layout_toStartOf="@+id/logon_google"
+        android:onClick="logonBtnClick"
         app:srcCompat="@drawable/ic_fb_icon" />
+
+    <TextView
+        android:id="@+id/logon_tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="80dp"
+        android:layout_toEndOf="@+id/logon_facebook"
+        android:text="Sign In" />
+
+    <TextView
+        android:id="@+id/logon_tv_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/logon_tv_status"
+        android:layout_marginTop="60dp"
+        android:text="Click an icon to connect you account and proceed"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/logon_btn_signout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Sign Out and Disconnect"
+        android:visibility="gone" />
+
+    <Chronometer
+        android:id="@+id/chronometer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logon_google"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textSize="18sp" />
 </RelativeLayout>

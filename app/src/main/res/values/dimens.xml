@@ -1,3 +1,4 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="dash_top_card_height">180dp</dimen>
 </resources>

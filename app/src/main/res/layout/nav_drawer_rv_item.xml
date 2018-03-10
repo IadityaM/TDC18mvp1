@@ -17,5 +17,6 @@
         android:layout_height="match_parent"
         android:layout_marginStart="8dp"
         android:gravity="center_vertical"
-        android:text="Nav Title" />
+        android:text="Nav Title"
+        android:textColor="@color/colorBackground_G50" />
 </LinearLayout>

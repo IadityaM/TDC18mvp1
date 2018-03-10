@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:padding="4dp"
-        android:text="Increase your Disruption Quotient (DQ) by structuring your groundbreaking B-Plan."
+        android:text="@string/ob3v1"
         android:textAlignment="center"
         android:textAllCaps="false" />
 

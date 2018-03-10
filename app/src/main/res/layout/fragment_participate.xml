@@ -17,18 +17,28 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:text="Next Rank"
+            android:text="Completion:"
             android:textAlignment="viewStart"
-            android:textColor="@color/colorPrimary" />
+            android:textColor="@color/colorTextSubheading" />
 
         <TextView
             android:id="@+id/dash_part_tv_rank"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="13dp"
-            android:layout_toEndOf="@+id/dash_part_tv_heading"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/nav_prog_part"
             android:text="Spectator"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dash_part_tv_rank_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/nav_prog_part"
+            android:text="Participant"
             android:textAllCaps="true"
             android:textColor="@color/colorAccent"
             android:textStyle="bold" />
@@ -37,12 +47,31 @@
             android:id="@+id/dash_part_iv_info"
             android:layout_width="20dip"
             android:layout_height="20dip"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
-            android:layout_marginStart="4dip"
-            android:layout_toEndOf="@+id/dash_part_tv_rank"
             android:contentDescription="Info Icon"
             android:src="@drawable/ic_error_outline_black_24dp"
-            android:tint="@color/colorAccentLight" />
+            android:tint="@color/colorTextMultiline" />
+
+        <ProgressBar
+            android:id="@+id/nav_prog_part"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/dash_part_iv_info"
+            android:max="8"
+            android:progress="4"
+            android:progressTint="@color/colorAccentLight" />
+
+        <TextView
+            android:id="@+id/nav_tv_participation_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/dash_part_tv_rank"
+            android:text="4 of 8"
+            android:textColor="@color/colorTextSubheading" />
 
     </RelativeLayout>
 

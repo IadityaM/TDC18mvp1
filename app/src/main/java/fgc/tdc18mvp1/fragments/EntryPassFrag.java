@@ -10,13 +10,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import fgc.tdc18mvp1.MapsActivity;
 import fgc.tdc18mvp1.R;
 import fgc.tdc18mvp1.UserProfileActivity;
 
 public class EntryPassFrag extends Fragment {
 
-    ImageView dash_entry_iv_dp, dash_entry_iv_loc;
+    ImageView dash_entry_iv_dp;/*, dash_entry_iv_loc;*/
     TextView dash_entry_tv_usrname;
     /*Button sbmake;*/
     Intent intentToUserProfile;
@@ -30,7 +29,7 @@ public class EntryPassFrag extends Fragment {
         intentToUserProfile = new Intent(getActivity(), UserProfileActivity.class);
 
         dash_entry_iv_dp = rootView.findViewById(R.id.dash_epass_iv_dp);
-        dash_entry_iv_loc = rootView.findViewById(R.id.dash_epass_iv_location);
+        /*dash_entry_iv_loc = rootView.findViewById(R.id.dash_epass_iv_location);*/
         dash_entry_tv_usrname = rootView.findViewById(R.id.dash_epass_tv_uname);
 
         dash_entry_iv_dp.setOnClickListener(new View.OnClickListener() {
@@ -40,12 +39,7 @@ public class EntryPassFrag extends Fragment {
             }
         });
 
-        dash_entry_iv_loc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getActivity(), MapsActivity.class));
-            }
-        });
+
 
         dash_entry_tv_usrname.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,7 +56,10 @@ public class EntryPassFrag extends Fragment {
             case R.id.dash_epass_tv_designation:
                 Snackbar.make(myView, "You're currently a " + null, Snackbar.LENGTH_SHORT).show();
                 break;
-            case R.id.dash_epass_iv_refresh:
+/*            case R.id.dash_epass_iv_refresh:
+                Snackbar.make(myView, "Refreshing Data. Please wait...", Snackbar.LENGTH_SHORT).show();
+                break;*/
+            case R.id.dash_epass_iv_next:
                 Snackbar.make(myView, "Refreshing Data. Please wait...", Snackbar.LENGTH_SHORT).show();
                 break;
 /*            case R.id.dash_epass_btn_snackb:
